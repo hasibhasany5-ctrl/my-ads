@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARZEO | Pre-owned Car Dealership</title>
+    <title>CARZEO | Best Pre-owned Cars</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,185 +14,139 @@
                 extend: {
                     colors: {
                         czOrange: '#f39c12',
-                        czDark: '#000000',
-                        czGray: '#1c1c1c'
+                        czDark: '#0a0a0a',
+                        czGray: '#1a1a1a',
                     }
                 }
             }
         }
     </script>
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .car-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        .car-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.1); border-color: #f39c12; }
+        
+        /* Hero background with your Car Image */
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.ibb.co.com/35zyztRs/119517-20241017154330-image2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
         .sticky-social { position: fixed; left: 0; top: 25%; z-index: 50; }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50">
 
-    <!-- 1. Sticky Social Media (Left Side) -->
+    <!-- 1. Sticky Social Bar (Left Side) -->
     <div class="sticky-social hidden md:flex flex-col gap-0.5">
-        <a href="#" class="bg-blue-800 text-white p-3 hover:pl-5 transition-all"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="bg-pink-600 text-white p-3 hover:pl-5 transition-all"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="bg-green-500 text-white p-3 hover:pl-5 transition-all"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="bg-blue-400 text-white p-3 hover:pl-5 transition-all"><i class="fas fa-phone-alt"></i></a>
-        <a href="#" class="bg-blue-600 text-white p-3 hover:pl-5 transition-all"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="bg-blue-800 text-white p-3 hover:pl-6 transition-all"><i class="fab fa-facebook-f w-5"></i></a>
+        <a href="#" class="bg-pink-600 text-white p-3 hover:pl-6 transition-all"><i class="fab fa-instagram w-5"></i></a>
+        <a href="#" class="bg-green-500 text-white p-3 hover:pl-6 transition-all"><i class="fab fa-whatsapp w-5"></i></a>
     </div>
 
     <!-- 2. Top Info Bar -->
-    <div class="bg-czOrange text-white py-1 px-6 md:px-16 text-[10px] md:text-[11px] font-bold text-center">
-        Call Us: +91 9833999689 , +91 8850218097 | Email: car_zeo@rediffmail.com | Total Cars in Stock: 16
+    <div class="bg-czOrange text-white py-2 px-6 md:px-16 flex justify-between items-center text-[10px] md:text-[11px] font-bold uppercase tracking-widest">
+        <div>Call Us: +91 9833999689 , +91 8850218097</div>
+        <div class="hidden lg:block">Total Cars in Stock: 16 | car_zeo@rediffmail.com</div>
     </div>
 
     <!-- 3. Navbar -->
     <nav class="bg-black text-white py-4 px-6 md:px-16 flex flex-col lg:flex-row justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center gap-2 mb-4 lg:mb-0">
-            <div class="w-10 h-10 border-2 border-czOrange rounded flex items-center justify-center text-czOrange font-black italic">CZ</div>
-            <h1 class="text-2xl font-black italic tracking-tighter uppercase leading-none">
-                CAR<span class="text-czOrange">ZEO</span>
-                <span class="block text-[7px] text-gray-400 font-bold tracking-[2px]">Pre-owned Car Dealership</span>
-            </h1>
+        <div class="flex items-center gap-4 mb-4 lg:mb-0">
+            <!-- আপনার দেওয়া অরিজিনাল লোগো -->
+            <img src="https://i.ibb.co.com/jZBKhtBX/292674475-464805692313176-7277840153946619-n.png" alt="CARZEO Logo" class="h-10 md:h-12">
+            <div class="hidden md:block">
+                <h1 class="text-xl font-black italic uppercase tracking-tighter leading-none">CAR<span class="text-czOrange">ZEO</span></h1>
+                <p class="text-[7px] text-gray-400 font-bold uppercase tracking-[2px]">Pre-owned Car Dealership</p>
+            </div>
         </div>
-        <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-[11px] font-black uppercase tracking-widest">
+        
+        <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-[11px] font-black uppercase tracking-[3px]">
             <a href="#" class="text-czOrange border-b-2 border-czOrange">Home</a>
             <a href="#stock" class="hover:text-czOrange transition">Stock Cars</a>
             <a href="#" class="hover:text-czOrange transition">Sell Car</a>
             <a href="#" class="hover:text-czOrange transition">About Us</a>
-            <a href="#" class="hover:text-czOrange transition">Services</a>
             <a href="#contact" class="hover:text-czOrange transition">Contact Us</a>
         </div>
     </nav>
 
     <!-- 4. Hero Section -->
-    <section class="relative h-[60vh] md:h-[75vh] flex items-center justify-center text-white text-center">
-        <img src="https://images.unsplash.com/photo-1542362567-b054cc394605?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Hero Car">
-        <div class="relative z-10 space-y-4">
-            <h2 class="text-5xl md:text-8xl font-black italic uppercase leading-none tracking-tighter">Best Cars <br> <span class="text-white opacity-90">At Best Prices</span></h2>
-            <div class="flex justify-center gap-2 mt-8">
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <div class="w-2 h-2 bg-czOrange rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-            </div>
+    <section class="hero-section h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
+        <div class="max-w-4xl px-6">
+            <span class="inline-block px-4 py-1 border border-white/30 rounded-full text-[10px] font-bold uppercase tracking-[4px] mb-6 backdrop-blur-sm">Luxury Performance Trust</span>
+            <h2 class="text-5xl md:text-9xl font-black italic uppercase leading-none tracking-tighter mb-8">
+                Best Cars <br> <span class="text-czOrange">At Best Prices</span>
+            </h2>
+            <a href="#stock" class="bg-czOrange text-white px-12 py-5 rounded-xl font-black uppercase text-sm shadow-2xl hover:bg-white hover:text-black transition-all inline-block">
+                Browse Inventory
+            </a>
         </div>
     </section>
 
-    <!-- 5. Car Stock Grid -->
-    <section id="stock" class="py-20 px-6 md:px-16 max-w-7xl mx-auto">
+    <!-- 5. Our Cars In Stock -->
+    <section id="stock" class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h3 class="text-3xl md:text-4xl font-black italic text-czOrange uppercase">Our Cars In Stock</h3>
-            <div class="w-24 h-1 bg-czOrange mx-auto mt-4 rounded-full"></div>
+            <h3 class="text-3xl md:text-4xl font-black italic uppercase tracking-tighter">Our Cars <span class="text-czOrange">In Stock</span></h3>
+            <div class="w-20 h-1 bg-czOrange mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            <!-- Car Card (Matched with Screenshot) -->
-            <div class="border border-gray-200 p-3 car-card transition-all duration-300">
-                <img src="https://images.unsplash.com/photo-1621815615088-66236b9f298a?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover mb-4" alt="Car">
-                <h4 class="text-[12px] font-black uppercase text-gray-700 leading-tight mb-3">Toyota Innova 2.5 VX 8 STR</h4>
-                <p class="text-[11px] text-gray-500 mb-1">Asking Price - <span class="font-bold text-gray-700">5.75L</span></p>
-                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">126000, Diesel, 2014</p>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <div class="border border-gray-200 p-3 car-card transition-all duration-300">
-                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover mb-4" alt="Car">
-                <h4 class="text-[12px] font-black uppercase text-gray-700 leading-tight mb-3">Honda Amaze 1.5 V AT i-DTEC</h4>
-                <p class="text-[11px] text-gray-500 mb-1">Asking Price - <span class="font-bold text-gray-700">5.75L</span></p>
-                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">65000, Diesel, 2018</p>
-            </div>
-
-            <div class="border border-gray-200 p-3 car-card transition-all duration-300">
-                <img src="https://images.unsplash.com/photo-1632243193041-563a017a92ad?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover mb-4" alt="Car">
-                <h4 class="text-[12px] font-black uppercase text-gray-700 leading-tight mb-3">MG Hector Sharp 1.5 DCT Petrol</h4>
-                <p class="text-[11px] text-gray-500 mb-1">Asking Price - <span class="font-bold text-gray-700">9.49L</span></p>
-                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">58000, Petrol, 2020</p>
-            </div>
-
-            <div class="border border-gray-200 p-3 car-card transition-all duration-300">
-                <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover mb-4" alt="Car">
-                <h4 class="text-[12px] font-black uppercase text-gray-700 leading-tight mb-3">Mahindra Bolero Neo N10</h4>
-                <p class="text-[11px] text-gray-500 mb-1">Asking Price - <span class="font-bold text-gray-700">8.95L</span></p>
-                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">59000, Diesel, 2023</p>
-            </div>
-
-            <div class="border border-gray-200 p-3 car-card transition-all duration-300">
-                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover mb-4" alt="Car">
-                <h4 class="text-[12px] font-black uppercase text-gray-700 leading-tight mb-3">Mahindra XUV700 AX 5 Diesel MT</h4>
-                <p class="text-[11px] text-gray-500 mb-1">Asking Price - <span class="font-bold text-gray-700">15.95L</span></p>
-                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">80000, Diesel, 2023</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Welcome Section -->
-    <section class="py-20 bg-czDark text-white text-center px-6">
-        <div class="max-w-4xl mx-auto space-y-6">
-            <h3 class="text-3xl font-black italic uppercase">Welcome To <span class="text-czOrange">CARZEO</span></h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-medium">
-                A one-stop showroom for all basic requirements of all kinds of people. We sell the car of your dreams and we deal in used cars of all range. Since 2005, our special characteristics is that we don't buy Accidental, Flooded & Meter tempered cars. We do the ...
-            </p>
-            <button class="border-2 border-white px-8 py-2 text-[11px] font-black uppercase hover:bg-czOrange hover:border-czOrange transition">Know More</button>
-        </div>
-    </section>
-
-    <!-- 7. Services & Facilities -->
-    <section class="py-20 px-6 md:px-16 max-w-7xl mx-auto">
-        <h3 class="text-center text-3xl font-black italic text-czOrange uppercase mb-12">Services & Facilities</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- EMI Calculator -->
-            <div class="bg-czOrange p-8 text-white rounded-sm">
-                <h4 class="text-xl font-black uppercase italic mb-6">EMI Calculator</h4>
-                <div class="space-y-4">
-                    <input type="text" placeholder="Loan Amount (₹)" class="w-full p-2 text-black text-sm outline-none">
-                    <input type="text" placeholder="Rate of Interest" class="w-full p-2 text-black text-sm outline-none">
-                    <div class="flex gap-4 text-[10px] font-black uppercase">
-                        <label><input type="radio" name="emi" checked> EMI In Advance</label>
-                        <label><input type="radio" name="emi"> EMI In Arrears</label>
-                    </div>
-                    <button class="bg-black text-white w-full py-2 font-black uppercase text-[11px]">Know More</button>
+            <!-- Car Card 1 (আপনার দেওয়া ছবি) -->
+            <div class="bg-white border border-gray-100 p-4 car-card rounded-3xl transition-all duration-500">
+                <div class="rounded-2xl overflow-hidden h-44 mb-6 relative group">
+                    <img src="https://i.ibb.co.com/6JWC7tFZ/119517-20241017154330-image1.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Stock Car">
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md text-white text-[8px] font-bold px-3 py-1 rounded-full uppercase">Featured</div>
+                </div>
+                <h4 class="text-sm font-black uppercase text-gray-800 leading-tight mb-2">Luxury Sedan Edition</h4>
+                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">Diesel • Automatic • 2023</p>
+                <div class="flex justify-between items-center border-t border-gray-50 pt-4">
+                    <p class="text-czOrange font-black text-xl">৳ 18.50L</p>
+                    <button class="bg-black text-white px-4 py-2 rounded-lg text-[9px] font-black uppercase hover:bg-czOrange transition">Details</button>
                 </div>
             </div>
 
-            <!-- Search Cars -->
-            <div class="bg-czOrange p-8 text-white rounded-sm">
-                <h4 class="text-xl font-black uppercase italic mb-6">Search Used Cars</h4>
-                <div class="space-y-4">
-                    <select class="w-full p-2 text-black text-sm outline-none"><option>Select Make</option></select>
-                    <select class="w-full p-2 text-black text-sm outline-none"><option>Select Body Type</option></select>
-                    <select class="w-full p-2 text-black text-sm outline-none"><option>Select Budget</option></select>
-                    <button class="bg-black text-white w-full py-2 font-black uppercase text-[11px]">Search</button>
+            <!-- Car Card 2 (বিকল্প স্টক ছবি) -->
+            <div class="bg-white border border-gray-100 p-4 car-card rounded-3xl transition-all duration-500">
+                <div class="rounded-2xl overflow-hidden h-44 mb-6 relative group">
+                    <img src="https://i.ibb.co.com/35zyztRs/119517-20241017154330-image2.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Stock Car">
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md text-white text-[8px] font-bold px-3 py-1 rounded-full uppercase">Top Gear</div>
+                </div>
+                <h4 class="text-sm font-black uppercase text-gray-800 leading-tight mb-2">Premium SUV Model</h4>
+                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">Petrol • Manual • 2024</p>
+                <div class="flex justify-between items-center border-t border-gray-50 pt-4">
+                    <p class="text-czOrange font-black text-xl">৳ 24.00L</p>
+                    <button class="bg-black text-white px-4 py-2 rounded-lg text-[9px] font-black uppercase hover:bg-czOrange transition">Details</button>
                 </div>
             </div>
 
-            <!-- Best Value -->
-            <div class="relative rounded-sm overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover brightness-50 group-hover:scale-110 transition duration-700" alt="Value">
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                    <h4 class="text-2xl font-black italic text-white uppercase leading-tight mb-6">We Give Best Value <br> <span class="text-czOrange">For Your Car</span></h4>
-                    <button class="border-2 border-white text-white px-6 py-2 font-black uppercase text-[11px] hover:bg-czOrange hover:border-czOrange">Sell Your Car Now</button>
-                </div>
-            </div>
+            <!-- অন্যান্য গাড়ির কার্ড একইভাবে যোগ করা যাবে -->
+
         </div>
     </section>
 
-    <!-- 8. Testimonials Section -->
-    <section class="py-20 bg-czDark text-white text-center">
-        <h3 class="text-3xl font-black italic uppercase mb-4">Client Testimonials</h3>
-        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Check this space later for our customer's testimonials</p>
-    </section>
-
-    <!-- 9. Footer -->
-    <footer class="bg-czDark text-gray-500 py-10 px-6 md:px-16 border-t border-gray-900 text-center">
-        <p class="text-[10px] font-bold uppercase mb-4">© Copyright 2026 Carzeo</p>
-        <div class="flex flex-wrap justify-center gap-6 text-[10px] font-black uppercase mb-6">
-            <a href="#">Home</a><a href="#">Stock Cars</a><a href="#">Sell Cars</a><a href="#">Services</a><a href="#">About Us</a><a href="#">Contact Us</a>
+    <!-- 6. Footer -->
+    <footer id="contact" class="bg-black text-gray-500 py-20 px-6 md:px-16 text-center">
+        <!-- ফুটার লোগো -->
+        <img src="https://i.ibb.co.com/jZBKhtBX/292674475-464805692313176-7277840153946619-n.png" alt="CARZEO Logo" class="h-12 mx-auto grayscale opacity-50 mb-10">
+        
+        <p class="text-[10px] font-bold uppercase tracking-[5px] mb-8">© 2026 CARZEO AUTOMOTIVE. ALL RIGHTS RESERVED.</p>
+        
+        <div class="flex justify-center gap-8 text-xl">
+            <i class="fab fa-facebook-f hover:text-czOrange cursor-pointer transition"></i>
+            <i class="fab fa-instagram hover:text-czOrange cursor-pointer transition"></i>
+            <a href="https://wa.me/919833999689"><i class="fab fa-whatsapp hover:text-czOrange cursor-pointer transition"></i></a>
         </div>
-        <div class="flex items-center justify-center gap-2 text-xs">
+        
+        <div class="mt-10 flex items-center justify-center gap-2 text-[10px] uppercase font-bold tracking-widest">
             <span>Powered by</span>
-            <span class="text-white font-black italic tracking-tighter">car<span class="text-czOrange">wale</span></span>
+            <span class="text-white italic">car<span class="text-czOrange">zeo</span> technology</span>
         </div>
     </footer>
 
-    <!-- Mobile Floating Call Button -->
-    <a href="tel:+919833999689" class="md:hidden fixed bottom-6 right-6 bg-czOrange text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 animate-bounce">
-        <i class="fas fa-phone-alt text-xl"></i>
+    <!-- Floating Mobile WhatsApp -->
+    <a href="https://wa.me/919833999689" class="md:hidden fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 animate-bounce">
+        <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
 </body>
