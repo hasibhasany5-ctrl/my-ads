@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARZEO | Best Pre-owned Cars</title>
+    <title>CARZEO | Best Pre-owned Cars in Banani, Dhaka</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,7 @@
                 extend: {
                     colors: {
                         czOrange: '#f39c12',
-                        czDark: '#0a0a0a',
+                        czDark: '#000000',
                         czGray: '#1a1a1a',
                     }
                 }
@@ -25,7 +25,6 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #1a1a1a; }
         .car-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.1); border-color: #f39c12; }
         
-        /* Hero background with your Car Image */
         .hero-section {
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.ibb.co.com/35zyztRs/119517-20241017154330-image2.png');
             background-size: cover;
@@ -37,27 +36,30 @@
 </head>
 <body class="bg-gray-50">
 
-    <!-- 1. Sticky Social Bar (Left Side) -->
+    <!-- 1. Sticky Social Bar (Updated Links) -->
     <div class="sticky-social hidden md:flex flex-col gap-0.5">
         <a href="#" class="bg-blue-800 text-white p-3 hover:pl-6 transition-all"><i class="fab fa-facebook-f w-5"></i></a>
-        <a href="#" class="bg-pink-600 text-white p-3 hover:pl-6 transition-all"><i class="fab fa-instagram w-5"></i></a>
-        <a href="#" class="bg-green-500 text-white p-3 hover:pl-6 transition-all"><i class="fab fa-whatsapp w-5"></i></a>
+        <a href="https://wa.me/8801918666696" class="bg-green-500 text-white p-3 hover:pl-6 transition-all"><i class="fab fa-whatsapp w-5"></i></a>
+        <a href="mailto:carzeobd@gmail.com" class="bg-red-600 text-white p-3 hover:pl-6 transition-all"><i class="fas fa-envelope w-5"></i></a>
     </div>
 
-    <!-- 2. Top Info Bar -->
-    <div class="bg-czOrange text-white py-2 px-6 md:px-16 flex justify-between items-center text-[10px] md:text-[11px] font-bold uppercase tracking-widest">
-        <div>Call Us: +91 9833999689 , +91 8850218097</div>
-        <div class="hidden lg:block">Total Cars in Stock: 16 | car_zeo@rediffmail.com</div>
+    <!-- 2. Top Info Bar (Updated with Banani Info) -->
+    <div class="bg-czOrange text-white py-2 px-6 md:px-16 flex flex-col md:flex-row justify-between items-center text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-center">
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+            <span><i class="fas fa-phone-alt mr-1"></i> 01918-666696</span>
+            <span><i class="fas fa-envelope mr-1"></i> carzeobd@gmail.com</span>
+            <span class="hidden lg:inline"><i class="fas fa-map-marker-alt mr-1"></i> Banani, Dhaka</span>
+        </div>
+        <div class="mt-1 md:mt-0">Total Cars in Stock: 16</div>
     </div>
 
     <!-- 3. Navbar -->
     <nav class="bg-black text-white py-4 px-6 md:px-16 flex flex-col lg:flex-row justify-between items-center sticky top-0 z-50">
         <div class="flex items-center gap-4 mb-4 lg:mb-0">
-            <!-- আপনার দেওয়া অরিজিনাল লোগো -->
             <img src="https://i.ibb.co.com/jZBKhtBX/292674475-464805692313176-7277840153946619-n.png" alt="CARZEO Logo" class="h-10 md:h-12">
             <div class="hidden md:block">
                 <h1 class="text-xl font-black italic uppercase tracking-tighter leading-none">CAR<span class="text-czOrange">ZEO</span></h1>
-                <p class="text-[7px] text-gray-400 font-bold uppercase tracking-[2px]">Pre-owned Car Dealership</p>
+                <p class="text-[7px] text-gray-400 font-bold uppercase tracking-[2px]">Banani Showroom</p>
             </div>
         </div>
         
@@ -73,17 +75,18 @@
     <!-- 4. Hero Section -->
     <section class="hero-section h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
         <div class="max-w-4xl px-6">
-            <span class="inline-block px-4 py-1 border border-white/30 rounded-full text-[10px] font-bold uppercase tracking-[4px] mb-6 backdrop-blur-sm">Luxury Performance Trust</span>
+            <span class="inline-block px-5 py-1.5 border border-white/30 rounded-full text-[10px] font-bold uppercase tracking-[5px] mb-6 backdrop-blur-sm bg-black/20">Now in Banani, Dhaka</span>
             <h2 class="text-5xl md:text-9xl font-black italic uppercase leading-none tracking-tighter mb-8">
                 Best Cars <br> <span class="text-czOrange">At Best Prices</span>
             </h2>
-            <a href="#stock" class="bg-czOrange text-white px-12 py-5 rounded-xl font-black uppercase text-sm shadow-2xl hover:bg-white hover:text-black transition-all inline-block">
-                Browse Inventory
-            </a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#stock" class="bg-czOrange text-white px-10 py-4 rounded-xl font-black uppercase text-sm shadow-2xl hover:brightness-110 transition-all">Browse Stock</a>
+                <a href="tel:01918666696" class="bg-white text-black px-10 py-4 rounded-xl font-black uppercase text-sm hover:bg-czOrange hover:text-white transition-all">Call Now</a>
+            </div>
         </div>
     </section>
 
-    <!-- 5. Our Cars In Stock -->
+    <!-- 5. Our Cars Section -->
     <section id="stock" class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h3 class="text-3xl md:text-4xl font-black italic uppercase tracking-tighter">Our Cars <span class="text-czOrange">In Stock</span></h3>
@@ -91,63 +94,52 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            
-            <!-- Car Card 1 (আপনার দেওয়া ছবি) -->
+            <!-- Car Card 1 -->
             <div class="bg-white border border-gray-100 p-4 car-card rounded-3xl transition-all duration-500">
                 <div class="rounded-2xl overflow-hidden h-44 mb-6 relative group">
                     <img src="https://i.ibb.co.com/6JWC7tFZ/119517-20241017154330-image1.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Stock Car">
-                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md text-white text-[8px] font-bold px-3 py-1 rounded-full uppercase">Featured</div>
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md text-white text-[8px] font-bold px-3 py-1 rounded-full uppercase">Banani Special</div>
                 </div>
                 <h4 class="text-sm font-black uppercase text-gray-800 leading-tight mb-2">Luxury Sedan Edition</h4>
-                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">Diesel • Automatic • 2023</p>
+                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">Certified • Dhaka Metro</p>
                 <div class="flex justify-between items-center border-t border-gray-50 pt-4">
                     <p class="text-czOrange font-black text-xl">৳ 18.50L</p>
                     <button class="bg-black text-white px-4 py-2 rounded-lg text-[9px] font-black uppercase hover:bg-czOrange transition">Details</button>
                 </div>
             </div>
-
-            <!-- Car Card 2 (বিকল্প স্টক ছবি) -->
-            <div class="bg-white border border-gray-100 p-4 car-card rounded-3xl transition-all duration-500">
-                <div class="rounded-2xl overflow-hidden h-44 mb-6 relative group">
-                    <img src="https://i.ibb.co.com/35zyztRs/119517-20241017154330-image2.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Stock Car">
-                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md text-white text-[8px] font-bold px-3 py-1 rounded-full uppercase">Top Gear</div>
-                </div>
-                <h4 class="text-sm font-black uppercase text-gray-800 leading-tight mb-2">Premium SUV Model</h4>
-                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-4">Petrol • Manual • 2024</p>
-                <div class="flex justify-between items-center border-t border-gray-50 pt-4">
-                    <p class="text-czOrange font-black text-xl">৳ 24.00L</p>
-                    <button class="bg-black text-white px-4 py-2 rounded-lg text-[9px] font-black uppercase hover:bg-czOrange transition">Details</button>
-                </div>
-            </div>
-
-            <!-- অন্যান্য গাড়ির কার্ড একইভাবে যোগ করা যাবে -->
-
         </div>
     </section>
 
-    <!-- 6. Footer -->
-    <footer id="contact" class="bg-black text-gray-500 py-20 px-6 md:px-16 text-center">
-        <!-- ফুটার লোগো -->
-        <img src="https://i.ibb.co.com/jZBKhtBX/292674475-464805692313176-7277840153946619-n.png" alt="CARZEO Logo" class="h-12 mx-auto grayscale opacity-50 mb-10">
-        
-        <p class="text-[10px] font-bold uppercase tracking-[5px] mb-8">© 2026 CARZEO AUTOMOTIVE. ALL RIGHTS RESERVED.</p>
-        
-        <div class="flex justify-center gap-8 text-xl">
-            <i class="fab fa-facebook-f hover:text-czOrange cursor-pointer transition"></i>
-            <i class="fab fa-instagram hover:text-czOrange cursor-pointer transition"></i>
-            <a href="https://wa.me/919833999689"><i class="fab fa-whatsapp hover:text-czOrange cursor-pointer transition"></i></a>
-        </div>
-        
-        <div class="mt-10 flex items-center justify-center gap-2 text-[10px] uppercase font-bold tracking-widest">
-            <span>Powered by</span>
-            <span class="text-white italic">car<span class="text-czOrange">zeo</span> technology</span>
-        </div>
-    </footer>
+    <!-- 6. Footer (Updated with Banani Address) -->
+    <footer id="contact" class="bg-black text-gray-400 py-24 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="space-y-6">
+                <img src="https://i.ibb.co.com/jZBKhtBX/292674475-464805692313176-7277840153946619-n.png" alt="Logo" class="h-10 grayscale opacity-70">
+                <p class="text-sm leading-relaxed uppercase font-bold tracking-tight opacity-50">Premier pre-owned car dealership specializing in quality, trust, and transparency in Banani.</p>
+                <div class="flex gap-6 text-xl">
+                    <i class="fab fa-facebook-f hover:text-czOrange cursor-pointer"></i>
+                    <i class="fab fa-instagram hover:text-czOrange cursor-pointer"></i>
+                    <a href="https://wa.me/8801918666696"><i class="fab fa-whatsapp hover:text-czOrange transition"></i></a>
+                </div>
+            </div>
+            
+            <div class="space-y-8">
+                <h5 class="text-white font-black uppercase tracking-[3px] text-xs">Base Station</h5>
+                <div class="space-y-4 text-[13px] font-bold uppercase tracking-widest">
+                    <p class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt text-czOrange mt-1"></i>
+                        <span>10, Kamal Ataturk Avenue, <br> Banani, Dhaka, Bangladesh, 1213</span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-czOrange"></i>
+                        <span>01918-666696</span>
+                    </p>
+                    <p class="flex items-center gap-3 lowercase">
+                        <i class="fas fa-envelope text-czOrange"></i>
+                        <span>carzeobd@gmail.com</span>
+                    </p>
+                </div>
+            </div>
 
-    <!-- Floating Mobile WhatsApp -->
-    <a href="https://wa.me/919833999689" class="md:hidden fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 animate-bounce">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-
-</body>
-</html>
+            <div class="space-y-8 text-center md:text-right">
+                <h5 class="text-white font-black uppercase tracking-[3px] text
